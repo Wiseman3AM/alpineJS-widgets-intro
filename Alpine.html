@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Counter</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+        
+        body{
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+            background-color: beige;
+        }
+
+        .heading{
+            text-align: center;
+            color: navy;
+        }
+
+        .counter{
+            color: navy;
+            margin-left: 1em;
+            text-align: center;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .content{
+            display: flex;
+            background-color: cornsilk;
+        }
+
+        .increment{
+            margin-left: 1em;
+           
+        }
+
+        .decrement{
+            
+           
+        }
+
+        .extra{
+            margin-left: 1em;
+            padding-top: 0.2em;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div x-data="{count : 0}">
+        <h1 class="heading">Counter-Alpine</h1>
+    
+        <div class="content">
+        <div>
+            <button class="decrement" @click="count--">-</button>
+            <button class="increment" @click="count++">+</button>
+        </div>
+        <div class="extra">=</div>
+        <div class="counter" x-text="count"></div>
+        
+    </div>
+    </div>
+
+    <a href="Index.html"><h1 class="heading">Counter using DOM/AlpineJS</h1></a>
+
+
+</body>
+</html>
