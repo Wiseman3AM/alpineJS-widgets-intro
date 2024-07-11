@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpine Counter</title>
-    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"></script>
+    <script src="alpine.js" defer></script>
     <style>
         
         body{
@@ -49,13 +50,14 @@
     </style>
 </head>
 <body>
-    <div x-data="{count : 0}">
+    <div>
         <h1 class="heading">Counter-Alpine</h1>
     
-        <div class="content">
+        <div class="content" x-data="counterData">
         <div>
-            <button class="decrement" @click="count--">-</button>
-            <button class="increment" @click="count++">+</button>
+            <button class="increment" @click="increment()">+</button>
+            <button class="decrement" @click="decrement()">-</button>
+            <button class="reset" @click="count = ''">reset</button>
         </div>
         <div class="extra">=</div>
         <div class="counter" x-text="count"></div>
